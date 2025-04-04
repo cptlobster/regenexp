@@ -1,0 +1,33 @@
+# <one line to give the program's name and a brief idea of what it does.>
+# Copyright (C) 2025 Dustin Thomas <stdio@cptlobster.dev>
+#
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later
+# version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program. If not, see <https://www.gnu.org/licenses/>.
+#
+[package]
+name = "regenex"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+chumsky = "0.10.0"
+subenum = "1.1.2"
+clap = { version = "4.5.35", optional = true, features = ["derive"] }
+clap_derive = { version = "4.5.32", optional = true }
+log = { version = "0.4.27", optional = true }
+
+[features]
+cli = ["dep:clap", "dep:clap_derive", "dep:log"]
+
+[[bin]]
+name = "regenex"
+required-features = ["cli"]
