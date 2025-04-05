@@ -17,7 +17,29 @@ use chumsky::prelude::*;
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum Regexp {
+    Matcher(Matcher),
+    Quantifier(Box<Regexp>, Quantifier),
+}
 
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum Matcher {
+    Universal,
+    Literal(char),
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum Quantifier {
+    // Zero or one of (?)
+    Optional,
+    // Zero or more (greedy) (*)
+    Greedy,
+    // Zero or more (lazy) (*?)
+    Lazy,
+    // Exactly n occurrences ({n})
+    Exact(usize),
+    // At least n occurrences ({n,})
+    AtLeast(usize),
+    Range(usize, usize)
 }
 
 pub fn parser<'a>() -> impl Parser<'a, &'a str, Vec<Regexp>> {
