@@ -235,7 +235,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "regenex"
+name = "regenexp"
 version = "0.1.0"
 dependencies = [
  "chumsky",
