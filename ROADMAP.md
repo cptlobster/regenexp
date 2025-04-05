@@ -1,0 +1,65 @@
+# Feature Roadmap
+## Regex Parser
+Parse all normal sequences of the Rust regex parser
+
+- [ ] Character Classes
+  - [ ] Literals 
+  - [ ] All characters (`.`)
+  - [ ] Character ranges (`[...]`)
+    - [ ] Not (`[^...]`)
+    - [ ] Intersections (`[...&&...]`)
+    - [ ] Difference (`[...--...]`)
+    - [ ] Relative Complement (XOR) (`[...~~...]`)
+    - [ ] Named groups (`[[:...:]]`)
+      - [ ] alnum
+      - [ ] alpha
+      - [ ] ascii
+      - [ ] blank
+      - [ ] cntrl
+      - [ ] digit
+      - [ ] graph
+      - [ ] lower
+      - [ ] print
+      - [ ] punct
+      - [ ] space
+      - [ ] upper
+      - [ ] word
+      - [ ] xdigit
+  - [ ] Meta Sequences
+    - [ ] Basic meta sequences (`\s`, `\w`, `\d`, negative variants)
+    - [ ] Unicode properties (`\p`, `\P` for negation)
+    - [ ] Hex values (`\u`, `\x`)
+    - [ ] Literals (`\`)
+- [ ] Anchors
+  - [ ] Beginning (`^`)
+  - [ ] Ending (`$`)
+  - [ ] Start of String (`\A`)
+  - [ ] Absolute end of string (`\z`)
+  - [ ] Word boundaries (`\b`, `\B` for negation)
+- [ ] Quantifiers
+  - [ ] 0 or 1 (`?`)
+  - [ ] 0 or more (`*`)
+  - [ ] 1 or more (`+`)
+  - [ ] Numeric (`{...}`)
+    - [ ] Exact (`{n}`)
+    - [ ] n or more (`{n,}`)
+    - [ ] Between n and m (`{n,m}`)
+  - [ ] Lazy quantifier (`*?`)
+- [ ] Groupings
+  - [ ] Capturing Group (`(...)`)
+  - [ ] Non-capturing Group (`(?:...)`)
+  - [ ] Named Capturing Group (`(?P<name>...)`)
+- [ ] Modifiers
+  - [ ] Inline Modifiers (`(?imsUx)`)
+  - [ ] Localized Inline Modifiers (`(?imsUx:...)`)
+- [ ] Flags
+  - [ ] Global (`g`)
+  - [ ] Multiline (`m`)
+  - [ ] Case Insensitive (`i`)
+  - [ ] Ignore Whitespace (`x`)
+  - [ ] Single Line (`s`)
+  - [ ] Ungreedy (`U`)
+
+## Random Generator
+- [ ] Generate single character values
+- [ ] Generate multiple groups within quantifier constraints

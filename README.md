@@ -1,6 +1,9 @@
 # REcursive GENerative EXpressions
 Randomly generate strings that match a specific regex.
 
+## Goals
+See [ROADMAP.md](ROADMAP.md).
+
 ## License
 This program is licensed under [the GNU General Public License, version 3](LICENSE.md).
 
